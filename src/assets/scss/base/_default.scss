@@ -1,0 +1,60 @@
+body {
+  background: $background-default;
+  color: $color-default;
+  font-family: sans-serif;
+}
+a {
+  color: map_get($color-2nd, default);
+  &:hover,
+  &:active {
+    color: map_get($color-2nd, light);
+  }
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: $color-default;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: $color-default;
+}
+
+::placeholder {
+  color: $color-default;
+}
+
+h1 {
+  color: map_get($color-3rd, default);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+iframe,
+select,
+textarea {
+  background: $background-default;
+  color: $color-default;
+  padding: $gap;
+}
+input,
+button {
+  background: map_get($color-2nd, default);
+  &[submit],
+  &[button],
+  &[reset],
+  &[disabled] {
+    background: map_get($color-2nd, default);
+  }
+}
+

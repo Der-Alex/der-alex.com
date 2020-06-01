@@ -1,0 +1,54 @@
+/*
+ * Generate margin and padding helper classes
+ * .m-s, .m-xl, .p-xs or .m-l-xs, .p-b-xl
+ */
+$gap-types: (
+  m: margin,
+  p: padding
+);
+
+$positions: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left
+);
+$sizes: (
+  xs: $gap-xs,
+  s: $gap-s,
+  m: $gap-m,
+  l: $gap-l,
+  xl: $gap-xl,
+);
+
+@each $k_gap, $v_gap in $gap-types {
+  .#{$k_gap} {
+    @each $k_size, $v_size in $sizes {
+      &-#{$k_size} {
+        #{$v_gap}: #{$v_size};
+      }
+    }
+    @each $k_pos, $v_pos in $positions {
+      &-#{$k_pos} {
+        @each $k_size, $v_size in $sizes {
+          &-#{$k_size} {
+            #{$v_gap}-#{$v_pos}: #{$v_size};
+          }
+        }
+      }
+    }
+  }
+}
+
+.stage {
+  font-size: $font-xxl;
+}
+.h1 {
+  font-size: $font-xl;
+}
+.h2 {
+  font-size: $font-l;
+}
+.h3 {
+  font-size: $font-m;
+}

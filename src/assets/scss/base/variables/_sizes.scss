@@ -1,0 +1,27 @@
+/*
+ * MEDIA QUERY BREAKPOINT SIZES
+ */
+$mq-s: 320px;
+$mq-m: 960px;
+$mq-l: 1280px;
+$mq-xl: 1920px;
+
+/*
+ * DEFAULT MARGINS AND PASSINGS
+ */
+$gap: 0.25rem;
+$gap-xs: $gap / 2;
+$gap-s: $gap;
+$gap-m: $gap * 2;
+$gap-l: $gap * 4;
+$gap-xl: $gap * 10;
+
+/*
+ * FONT SIZES
+ */
+$font-xs: 12px;
+$font-s: 14px;
+$font-m: 16px;
+$font-l: 20px;
+$font-xl: 26px;
+$font-xxl: 32px;

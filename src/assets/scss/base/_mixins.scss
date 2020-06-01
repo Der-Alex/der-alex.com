@@ -1,0 +1,47 @@
+/*
+ * Default pseudo-element configurations that you always need.
+ * Also you can override these :)
+ */
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+/*
+ * Set a responsive ratio to elements like images
+ */
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+/*
+ * Shorter media query call
+ */
+@mixin mq($width, $type: min) {
+  @if $type == max {
+    $width: $width - 1px;
+  }
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+/*
+ * Truncate text with ellipsis
+ */
+@mixin truncate($max-width) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

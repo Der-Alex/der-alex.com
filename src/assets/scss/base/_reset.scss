@@ -7,34 +7,56 @@
   font-size: 100%;
   vertical-align: baseline;
 }
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tab-size: 2;
+  tab-size: 2;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+}
+
 body {
   line-height: 1.5;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
+
+main {
+  display: block;
+}
+
 ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+pre,
 code,
 kbd,
 samp {
   font-family: monospace;
 }
+
 small {
   font-size: 80%;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -82,9 +104,11 @@ select {
   border-width: 1px;
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -99,6 +123,7 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: none;
 }
+
 label {
   cursor: pointer;
 }

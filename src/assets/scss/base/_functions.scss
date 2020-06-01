@@ -1,0 +1,56 @@
+/*
+ * Make a base64 encoded svg for background images
+ */
+@function svg-base64($svg) {
+  $encoded: '';
+  $slice: 2000;
+  $index: 0;
+  $loops: ceil(str-length($svg) / $slice);
+  
+  @for $i from 1 through $loops {
+    $chunk: str-slice($svg, $index, $index + $slice - 1);
+    $chunk: str-replace($chunk, '"', "'");
+    $chunk: str-replace($chunk, '<', '%3C');
+    $chunk: str-replace($chunk, '>', '%3E');
+    $chunk: str-replace($chunk, '&', '%26');
+    $chunk: str-replace($chunk, '#', '%23');
+    $encoded: #{$encoded}#{$chunk};
+    $index: $index + $slice;
+  }
+  
+  @return url("data:image/svg+xml;#{$encoded}");
+}
+
+/*
+ * Simple string replace function
+ */
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}
+
+/*
+ * Z-index function. If $name is in the list of z-index items, the correct z-index will be found
+ */
+@function z($name, $z-indexes-list: $z-indexes) {
+  @if index($z-indexes-list, $name) {
+    @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes-list}';
+    
+    @return null;
+  }
+}
+
+/*
+ * The z-index list. The higher the higher... :D.
+ */
+$z-indexes: (
+  'modal',
+  'mobile-nav'
+);

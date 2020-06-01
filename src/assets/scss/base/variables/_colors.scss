@@ -1,0 +1,43 @@
+/*
+ * COLORS
+ */
+
+$color-1st: (
+  default: #161622,
+  light: lighten(#161622, 30%),
+  medium: lighten(#161622, 20%),
+  dark: #010101,
+);
+
+$color-2nd: (
+  default: #666699,
+  light: lighten(#666699, 20%),
+  medium: lighten(#666699, 10%),
+  dark: darken(#666699, 10%),
+);
+
+$color-3rd: (
+  default: #669999,
+  light: lighten(#669999, 20%),
+  medium: lighten(#669999, 10%),
+  dark: darken(#669999, 10%),
+);
+
+$grey: (
+  white: #fefefe,
+  light: #dedede,
+  medium: #aaa,
+  dark: #777,
+  darker: #555,
+  black: #010101,
+);
+
+$state: (
+  success: #26de81,
+  info: #45aaf2,
+  warning: #f7b731,
+  error: #fc5c65,
+);
+
+$background-default: map_get($color-1st, default);
+$color-default: map_get($grey, light);

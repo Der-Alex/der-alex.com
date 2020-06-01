@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  web:
+    image: der-alex
+    env_file:
+      - host.env
+    expose:
+      - 80
+      - 443
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

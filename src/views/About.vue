@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <TestStyles></TestStyles>
   </div>
 </template>
+
+<script>
+  import TestStyles from "@/components/TestStyles";
+  export default {
+    name: "About",
+    components: {
+      TestStyles
+    }
+  };
+</script>

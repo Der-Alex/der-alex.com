@@ -1,18 +1,21 @@
 <template>
   <div class="ml-4">
-    <h2 class="my-4 size-3">Charaktereigenschaften</h2>
+    <h2 class="my-4 size-3">Wer ist Der Alex?</h2>
     <character-setting :icon="['fas', 'baby']" title="Geburt 1984" :hasStart="true" />
     <character-setting :icon="['fas', 'gamepad']" :title="'Level ' + getAgeYear" />
     <character-setting :icon="['fas', 'venus-mars']" title="Männlich / Er / Ihm" />
     <character-setting :icon="['fas', 'globe-europe']" title="Dortmund" />
     <character-setting :icon="['fas', 'tools']" title="Arbeitgeber">
-      <p><strong>Bis heute</strong> Web Developer bei <a href="https://bitsandlikes.de" target="_blank" class="color-primary">bits &amp; likes GmbH</a></p>
+      <p>
+        <strong>Bis heute</strong> Web Developer bei
+        <a href="https://bitsandlikes.de" rel="noreferrer" target="_blank" class="color-primary">bits &amp; likes GmbH</a>
+      </p>
       <p><strong>2016 - 2017</strong> Senior Software Developer bei KPS digital GmbH</p>
       <p><strong>2014 - 2016</strong> Senior Developer bei getit GmbH</p>
       <p><strong>2007 - 2014</strong> IT Applications Designer bei arvato direct services, Bertelsmann</p>
     </character-setting>
     <character-setting :icon="['fab', 'github-alt']" title="Aktuelle Projekte">
-      <p><a href="https://ruhrpott-ipsum.de" target="_blank" class="color-primary">Ruhrpott Ipsum - Blindtextgenerator ausm Pott</a></p>
+      <p><a href="https://ruhrpott-ipsum.de" rel="noreferrer" target="_blank" class="color-primary">Ruhrpott Ipsum - Blindtextgenerator ausm Pott</a></p>
     </character-setting>
     <character-setting :icon="['fas', 'heart']" title="Hobbies">
       <p>Meine Familie ❤️</p>
@@ -73,7 +76,13 @@ const getAgeYear = computed(() => {
 </script>
 <script>
 export default {
+  render: {
+    csp: true,
+  },
   head: {
+    htmlAttrs: {
+      lang: 'de',
+    },
     title: 'Frontend Entwickler aus Dortmund • Der-Alex.com • Der Alex, Erfinder von Ruhrpott Ipsum',
     meta: [
       { charset: 'utf-8' },

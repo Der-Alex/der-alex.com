@@ -35,9 +35,12 @@ span {
   padding: 0 0.25rem;
 }
 .calc {
-  width: 5rem;
+  width: 6rem;
 }
 .tr {
   text-align: right;
+}
+.res {
+  width: 3.5rem;
 }
 </style>

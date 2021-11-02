@@ -65,7 +65,7 @@ onMounted(() => {
   padding: 0 0.25rem;
 }
 .res {
-  width: 2.5rem;
+  width: 3.5rem;
   margin-left: 0.25rem;
   text-align: right;
 }

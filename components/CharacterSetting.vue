@@ -1,7 +1,7 @@
 <template>
   <div class="section flex" v-if="hasStart">
     <div class="line has-dot"></div>
-    <div class="content my-2"></div>
+    <div class="content my-3"></div>
   </div>
   <div class="section flex align-items-center line-height-0">
     <div class="circle flex align-items-center justify-content-center mr-2">
@@ -38,7 +38,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .line {
   border-left: 4px solid var(--primary);
-  margin-left: 1.5rem;
+  margin-left: 1.375rem;
   &.has-dot {
     position: relative;
 
@@ -59,5 +59,10 @@ const props = defineProps({
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.25s ease-in;
+}
+.section:hover .circle {
+  box-shadow: 0 0 0 8px rgba(130, 130, 130, 0.3);
 }
 </style>

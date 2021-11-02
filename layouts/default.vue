@@ -20,6 +20,7 @@
   min-height: 100vh;
   background: var(--bg);
   color: var(--primary);
+  padding-left: 10%;
 }
 footer {
   background: var(--bg);

@@ -1,12 +1,13 @@
 <template>
-  <h2>Das 1 x 1 der {{ props.currentNumber }}</h2>
-
-  <ul class="numbers">
-    <li class="number" v-for="num in numbers" :key="num">
-      <span class="calc tr">{{ num }} x {{ props.currentNumber }}</span> <span> = </span>
-      <span class="res tr">{{ num * props.currentNumber }}</span>
-    </li>
-  </ul>
+  <div class="multiplier my-4">
+    <h2 class="mb-4">Das 1 x 1 der {{ props.currentNumber }}</h2>
+    <ul class="numbers">
+      <li class="number" v-for="num in numbers" :key="num">
+        <span class="calc tr">{{ num }} x {{ props.currentNumber }}</span> <span> = </span>
+        <span class="res tr">{{ num * props.currentNumber }}</span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup>

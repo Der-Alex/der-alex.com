@@ -1,6 +1,7 @@
 <template>
   <div v-if="loaded">
     <multiplier :currentNumber="id" />
+    <nuxt-link :to="'rechenspiel/' + id">Rechenspiel der {{ id }}</nuxt-link>
   </div>
 </template>
 <script>
@@ -24,3 +25,14 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+a {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 0.5rem;
+
+  &.router-link-exact-active {
+    color: #42b983;
+  }
+}
+</style>

@@ -1,12 +1,18 @@
 <template>
   <div class="main">
-    <h1 class="py-2">Rechenspiel</h1>
+    <h1 class="py-2">Rechenspiel der {{ $route.params.id }}</h1>
     <h2 class="py-2">Dein Highscore:</h2>
     <p>{{ score.state.calculated }} Aufgaben</p>
     <p>{{ score.state.correct }} Richtig</p>
     <p>{{ score.state.wrong }} falsch</p>
     <div class="py-2">
-      <component v-for="component in components" :is="component.component" :key="component.key" @keyup.enter="addComponentHandler" />
+      <component
+        v-for="component in components"
+        :is="component.component"
+        :key="component.key"
+        @keyup.enter="addComponentHandler"
+        :multiplier="parseInt($route.params.id)"
+      />
     </div>
   </div>
 </template>

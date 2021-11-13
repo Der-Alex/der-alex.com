@@ -18,6 +18,13 @@ import { onMounted, ref, onRenderTriggered, onUpdated } from 'vue';
 
 import score from '~/new-store/score';
 
+const props = defineProps({
+  multiplier: {
+    type: Number,
+    required: false,
+  },
+});
+
 let check = ref(null);
 let res = ref('');
 let input = ref(null);
@@ -40,7 +47,8 @@ onMounted(() => {
   console.log('mounted');
   console.log('input', input.value);
   num1.value = score.getNewNum1();
-  num2.value = score.getNewNum2();
+  console.log('multiplier', props.multiplier);
+  num2.value = props.multiplier && props.multiplier && props.multiplier > 0 ? props.multiplier : score.getNewNum2();
   setTimeout(() => {
     input.value.focus();
   }, 50);

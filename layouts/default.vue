@@ -10,8 +10,8 @@
     <footer class="p-2 flex justify-content-center">
       <nuxt-link to="/" class="color-primary mr-3">Home</nuxt-link>
 
-      <nuxt-link to="/datenschutz" class="color-primary mr-3">Datenschutz</nuxt-link>
-      <nuxt-link to="/impressum" class="color-primary">Impressum</nuxt-link>
+      <nuxt-link to="/datenschutz" class="color-primary mr-3" rel="nofollow">Datenschutz</nuxt-link>
+      <nuxt-link to="/impressum" class="color-primary" rel="nofollow">Impressum</nuxt-link>
     </footer>
   </div>
 </template>

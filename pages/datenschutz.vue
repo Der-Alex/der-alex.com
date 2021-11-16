@@ -213,4 +213,16 @@
     </p>
   </div>
 </template>
-<script setup></script>
+<script>
+export default {
+  head: {
+    title: 'Datenschutz',
+    meta: [
+      {
+        name: 'robots',
+        content: 'noindex',
+      },
+    ],
+  },
+};
+</script>

@@ -65,4 +65,16 @@
     <p>Icons erstellt von <a href="https://https://fontawesome.com/" class="color-primary">Font Awesome</a></p>
   </div>
 </template>
-<script setup></script>
+<script>
+export default {
+  head: {
+    title: 'Impressum',
+    meta: [
+      {
+        name: 'robots',
+        content: 'noindex',
+      },
+    ],
+  },
+};
+</script>

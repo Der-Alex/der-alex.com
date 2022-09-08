@@ -5,7 +5,9 @@
   </div>
   <div class="section flex align-items-center line-height-0">
     <div class="circle flex align-items-center justify-content-center mr-2">
+      <client-only>
       <font-awesome-icon :icon="icon" size="lg" />
+      </client-only>
     </div>
     <h3 class="ml-1">{{ title }}</h3>
   </div>

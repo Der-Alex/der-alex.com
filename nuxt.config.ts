@@ -1,8 +1,4 @@
-import { defineNuxtConfig } from 'nuxt';
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  server: {
-    host: '0',
-  },
-  css: ['@/assets/scss/main.scss'],
-});
+  devtools: { enabled: true }
+})

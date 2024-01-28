@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'WaitingfortheSunrise';
+  src: url('/assets/fonts/WaitingfortheSunrise-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+main > *+* {
+  @apply mt-8;
+}

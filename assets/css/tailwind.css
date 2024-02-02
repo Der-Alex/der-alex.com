@@ -8,6 +8,12 @@
   font-display: swap;
 }
 
-main > *+* {
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+.wrapper > *+* {
   @apply mt-8;
 }

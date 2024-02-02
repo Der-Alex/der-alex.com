@@ -1,3 +1,5 @@
 <template>
-  <AwArticleList />
+  <div class="wrapper">
+    <AwArticleList />
+  </div>
 </template>

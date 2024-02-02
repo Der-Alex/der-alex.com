@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         extra: ['WaitingfortheSunrise'],
+        extra2: ['Open-Sans'],
       },
       screens: {
         mdplus: '876px',

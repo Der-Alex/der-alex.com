@@ -3,26 +3,26 @@ export const useMainNavLinks = () =>
     {
       url: '/webdesign',
       text: 'Webdesign',
-      componentName: 'IconPalette',
+      componentName: 'fa6-solid:palette',
     },
     {
       url: '/development',
       text: 'Development',
-      componentName: 'IconCode',
+      componentName: 'fa6-solid:code',
     },
     {
       url: '/devops',
       text: 'DevOps',
-      componentName: 'IconServer',
+      componentName: 'fa6-solid:server',
     },
     {
       url: '/archiv',
       text: 'Archiv',
-      componentName: 'IconBook',
+      componentName: 'fa6-solid:book',
     },
     {
       url: '/whoami',
       text: 'Whoami',
-      componentName: 'IconRobot',
+      componentName: 'fa6-solid:robot',
     },
   ]);

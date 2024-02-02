@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <section class="rounded-2xl bg-rhino-900 p-8">
+  <section class="rounded-2xl bg-rhino-900 shadow-sm shadow-rhino-900 p-8">
     <article>
       <p class="font-extra2 text-rhino-300">
         Willse noch ne Stulle futtern? Kannse dem Ömmaken ma über de Straße

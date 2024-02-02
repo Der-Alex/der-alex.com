@@ -21,7 +21,9 @@ const props = defineProps({
     <span class="flex items-center gap-2">
       <Tag v-for="tag in tags" :key="tag">{{ tag }}</Tag>
     </span>
-    <NuxtLink :to="url">
+    <NuxtLink
+      :to="url"
+      class="article-link transition-all duration-150 hover:text-amber-400">
       <h2 class="my-4 text-3xl text-balance">
         {{ title }}
       </h2>

@@ -11,6 +11,7 @@ const burgerStore = useBurgerStore();
       type="checkbox"
       id="toggle-nav"
       class="peer hidden"
+      v-model="burgerStore.checked"
       @click="burgerStore.toggle" />
     <span
       class="origin-top-left transition-all peer-checked:rotate-[30deg] patty w-10 h-1 rounded-md bg-rhino-950 group-hover:bg-amber-400"></span>

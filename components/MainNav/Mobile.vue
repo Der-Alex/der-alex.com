@@ -8,7 +8,7 @@ const burgerStore = useBurgerStore();
   <div
     class="w-full mdplus:hidden transition-all"
     :class="burgerStore.checked ? 'h-[22rem]' : 'h-0'">
-    <Burger class="absolute top-8 right-4 z-20" />
+    <Burger class="absolute transition-all duration-300 top-8 right-4 z-20" />
     <MainNavList
       class="transition-all duration-150 absolute z-10 left-0"
       :class="

@@ -5,14 +5,83 @@ const links = useMainNavLinks();
 const burgerStore = useBurgerStore();
 </script>
 <template>
-  <div
-    class="w-full mdplus:hidden transition-all"
-    :class="burgerStore.checked ? 'h-[22rem]' : 'h-0'">
-    <Burger class="absolute transition-all duration-300 top-8 right-4 z-20" />
-    <MainNavList
-      class="transition-all duration-150 absolute z-10 left-0"
-      :class="
-        burgerStore.checked ? 'top-20 opacity-100' : 'top-[-20rem] opacity-0'
-      " />
+  <div class="p-4 relative z-20 block lg:hidden">
+    <header
+      class="w-40 h-20 rounded-2xl flex items-center justify-between p-4 bg-gradient-to-br from-rhino-700 to-rhino-900">
+      <Logo />
+      <Burger />
+    </header>
+    <nav
+      class="absolute w-14 top-28 z-[12] px-4 py-4 rounded-2xl bg-rhino-800 transition-all"
+      :class="burgerStore.checked ? 'left-4' : '-left-20'">
+      <ul class="flex flex-col gap-2">
+        <li class="relative h-10 text-rhino-950 font-bold hover:text-amber-400">
+          <NuxtLink
+            to="/webdesign"
+            class="absolute h-full group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+            <Icon
+              name="material-symbols:palette-outline"
+              alt="Webdesign"
+              class="text-2xl" />
+            <span
+              class="transition-all ml-4 overflow-hidden"
+              :class="burgerStore.checked ? 'w-32' : 'w-0'"
+              >Webdesign</span
+            >
+          </NuxtLink>
+        </li>
+        <li class="relative h-10 text-rhino-950 font-bold hover:text-amber-400">
+          <NuxtLink
+            to="/development"
+            class="absolute h-full group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+            <Icon name="fa6-solid:code" alt="Development" class="text-2xl" />
+            <span
+              class="transition-all ml-4 overflow-hidden"
+              :class="burgerStore.checked ? 'w-32' : 'w-0'"
+              >Development</span
+            >
+          </NuxtLink>
+        </li>
+        <li class="relative h-10 text-rhino-950 font-bold hover:text-amber-400">
+          <NuxtLink
+            to="/devops"
+            class="absolute h-full group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+            <Icon name="fa6-solid:server" alt="DevOps" class="text-2xl" />
+            <span
+              class="transition-all ml-4 overflow-hidden"
+              :class="burgerStore.checked ? 'w-32' : 'w-0'"
+              >DevOps</span
+            >
+          </NuxtLink>
+        </li>
+        <li class="relative h-10 text-rhino-950 font-bold hover:text-amber-400">
+          <NuxtLink
+            to="/archiv"
+            class="absolute h-full group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+            <Icon name="fa6-solid:book" alt="Über mich" class="text-2xl" />
+            <span
+              class="transition-all ml-4 overflow-hidden"
+              :class="burgerStore.checked ? 'w-32' : 'w-0'"
+              >Archiv</span
+            >
+          </NuxtLink>
+        </li>
+        <li class="relative h-10 text-rhino-950 font-bold hover:text-amber-400">
+          <NuxtLink
+            to="/whoami"
+            class="absolute h-full group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+            <Icon name="fa6-solid:robot" alt="Über mich" class="text-2xl" />
+            <span
+              class="transition-all ml-4 overflow-hidden"
+              :class="burgerStore.checked ? 'w-32' : 'w-0'"
+              >Whoami</span
+            >
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
   </div>
+  <div
+    class="fixed top-0 left-0 w-full h-full bg-black/50 z-10"
+    v-if="burgerStore.checked"></div>
 </template>

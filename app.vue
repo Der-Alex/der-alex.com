@@ -1,10 +1,15 @@
+<script setup lang="ts">
+import { useBurgerStore } from './store/burgerStore';
+
+const burgerStore = useBurgerStore();
+</script>
 <template>
   <Html class="dark" />
   <Body class="bg-rhino-950 max-w-5xl mx-auto" />
   <MainNav class="hidden lg:block max-w-5xl px-4 mx-auto" />
   <MainNavMobile class="max-w-5xl px-4 mx-auto" />
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
   </NuxtLayout>
   <AwFooter class="max-w-5xl px-4 mx-auto" />
 </template>

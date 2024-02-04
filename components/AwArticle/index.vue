@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
+import { useIconNameStore } from '~/store/iconNameStore';
 import type { Article } from '~~/interfaces/article';
 const props = defineProps({
   article: {
@@ -11,6 +12,7 @@ const props = defineProps({
     default: false,
   },
 });
+const iconNameStore = useIconNameStore();
 const articleColor = computed(() => {
   let colorString = 'from-rhino-800 to-rhino-600 shadow-sm shadow-rhino-600';
   switch (props.article.category.toLowerCase()) {
@@ -30,41 +32,6 @@ const articleColor = computed(() => {
       break;
   }
   return colorString;
-});
-const iconName = computed(() => {
-  let icon = '';
-  if (props.article.tags[0]) {
-    switch (props.article.tags[0].toLowerCase()) {
-      case 'nuxt':
-        icon = 'simple-icons:nuxtdotjs';
-        break;
-      case 'vue':
-        icon = 'fa6-brands:vuejs';
-        break;
-      case 'js':
-        icon = 'fa6-brands:js';
-        break;
-      case 'nestjs':
-        icon = 'simple-icons:nestjs';
-        break;
-      case 'nodejs':
-        icon = 'fa6-brands:node';
-        break;
-      case 'html':
-        icon = 'fa6-brands:html5';
-        break;
-      case 'css':
-        icon = 'fa6-brands:css3';
-        break;
-      case 'kubernetes':
-      case 'docker':
-      case 'devops':
-        icon = 'mdi:kubernetes';
-      default:
-        break;
-    }
-  }
-  return icon;
 });
 const svgColor = computed(() => {
   let color = 'text-rhino-950/10';
@@ -97,7 +64,7 @@ const svgColor = computed(() => {
       <AwArticleContent :introduction="article.description" />
       <AwArticleFooter :created="article.created" />
       <Icon
-        :name="iconName"
+        :name="iconNameStore.getIconName(props.article.tags[0])"
         class="absolute top-1/2 -right-0 -translate-y-1/2 text-[250px] -rotate-[25deg]"
         :class="svgColor" />
     </div>

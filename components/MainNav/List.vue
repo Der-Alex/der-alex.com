@@ -8,7 +8,7 @@ const links = useMainNavLinks();
       <MainNavLink
         :url="link.url"
         :text="link.text"
-        :component-name="link.componentName" />
+        :icon-name="link.iconName" />
     </li>
   </ul>
 </template>

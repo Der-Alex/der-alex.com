@@ -7,7 +7,7 @@ const burgerStore = useBurgerStore();
   <Html class="dark" />
   <Body class="bg-rhino-950 max-w-5xl mx-auto" />
   <MainNav class="hidden lg:block max-w-5xl px-4 mx-auto" />
-  <MainNavMobile class="max-w-5xl px-4 mx-auto" />
+  <MobileNav />
   <NuxtLayout>
     <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
   </NuxtLayout>

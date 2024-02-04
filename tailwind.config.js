@@ -28,5 +28,14 @@ export default {
       },
     },
   },
+  safelist: [
+    'delay-[25ms]',
+    'delay-[50ms]',
+    'delay-[75ms]',
+    'delay-[100ms]',
+    'delay-[125ms]',
+    'delay-[150ms]',
+    'delay-[175ms]',
+  ],
   plugins: [],
 };

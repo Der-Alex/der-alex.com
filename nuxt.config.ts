@@ -9,4 +9,10 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  content: {
+    highlight: {
+      theme: 'github-dark',
+      preload: ['ts', 'js', 'json', 'vue', 'yaml', 'css', 'html', 'bash'],
+    },
+  },
 });

@@ -6,6 +6,10 @@ const props = defineProps({
     type: Object as PropType<Article>,
     required: true,
   },
+  isDetail: {
+    type: Boolean,
+    default: false,
+  },
 });
 const articleColor = computed(() => {
   let colorString = 'from-rhino-800 to-rhino-600 shadow-sm shadow-rhino-600';
@@ -31,6 +35,9 @@ const iconName = computed(() => {
   let icon = '';
   if (props.article.tags[0]) {
     switch (props.article.tags[0].toLowerCase()) {
+      case 'nuxt':
+        icon = 'simple-icons:nuxtdotjs';
+        break;
       case 'vue':
         icon = 'fa6-brands:vuejs';
         break;
@@ -78,18 +85,22 @@ const svgColor = computed(() => {
 });
 </script>
 <template>
-  <article
-    class="rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative overflow-hidden"
-    :class="articleColor">
-    <AwArticleHeader
-      :url="article.url"
-      :title="article.title"
-      :tags="article.tags" />
-    <AwArticleContent :introduction="article.introduction" />
-    <AwArticleFooter :date="article.date" />
-    <Icon
-      :name="iconName"
-      class="absolute top-1/2 -right-0 -translate-y-1/2 text-[250px] -rotate-[25deg]"
-      :class="svgColor" />
+  <article>
+    <div
+      class="rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative overflow-hidden"
+      :class="articleColor">
+      <AwArticleHeader
+        :url="article._path"
+        :title="article.title"
+        :tags="article.tags"
+        :is-detail="isDetail" />
+      <AwArticleContent :introduction="article.description" />
+      <AwArticleFooter :created="article.created" />
+      <Icon
+        :name="iconName"
+        class="absolute top-1/2 -right-0 -translate-y-1/2 text-[250px] -rotate-[25deg]"
+        :class="svgColor" />
+    </div>
+    <slot />
   </article>
 </template>

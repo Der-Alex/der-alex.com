@@ -10,5 +10,10 @@ const props = defineProps({
 });
 </script>
 <template>
-  <AwArticle v-for="article of articles" :key="article.id" :article="article" />
+  <section class="grid gap-8 md:grid-cols-2">
+    <AwArticle
+      v-for="article of articles"
+      :key="article.id"
+      :article="article" />
+  </section>
 </template>

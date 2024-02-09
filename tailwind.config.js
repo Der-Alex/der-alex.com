@@ -26,6 +26,10 @@ export default {
       screens: {
         mdplus: '876px',
       },
+      boxShadow: {
+        extra: '0px 0 4px 2px rgba(0,0,0,0.15)',
+        extra_link: '6px 0 2px -4px rgba(0,0,0,0.15)',
+      },
     },
   },
   safelist: [
@@ -36,6 +40,7 @@ export default {
     'delay-[125ms]',
     'delay-[150ms]',
     'delay-[175ms]',
+    'shadow-extra',
   ],
   plugins: [],
 };

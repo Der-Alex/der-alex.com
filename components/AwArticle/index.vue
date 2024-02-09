@@ -14,19 +14,19 @@ const props = defineProps({
 });
 const iconNameStore = useIconNameStore();
 const articleColor = computed(() => {
-  let colorString = 'from-rhino-800 to-rhino-600 shadow-sm shadow-rhino-600';
+  let colorString = 'from-rhino-800 to-rhino-600 shadow-extra';
   switch (props.article.category.toLowerCase()) {
     case 'webdesign':
       colorString =
-        'from-red-700/60 over-orange-600/60 to-amber-500/60 shadow-sm shadow-orange-600/60';
+        'from-red-700/60 over-orange-600/60 to-amber-500/60 shadow-extra';
       break;
     case 'development':
       colorString =
-        'from-emerald-700/60 over-green-600/60 to-lime-500/60 shadow-sm shadow-green-600/60';
+        'from-emerald-700/60 over-green-600/60 to-lime-500/60 shadow-extra';
       break;
     case 'devops':
       colorString =
-        'from-blue-600/60 via-sky-500/50 to-cyan-500/60 shadow-sm shadow-cyan-600/60';
+        'from-blue-600/60 via-sky-500/50 to-cyan-500/60 shadow-extra';
       break;
     default:
       break;
@@ -52,9 +52,9 @@ const svgColor = computed(() => {
 });
 </script>
 <template>
-  <article>
+  <article class="flex flex-col">
     <div
-      class="rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative overflow-hidden"
+      class="rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative flex flex-col h-full"
       :class="articleColor">
       <AwArticleHeader
         :url="article._path"

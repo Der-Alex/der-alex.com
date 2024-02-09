@@ -5,9 +5,9 @@ const burgerStore = useBurgerStore();
 
 <template>
   <div class="block lg:hidden">
-    <div class="max-w-5xl p-4 mx-auto">
+    <div class="max-w-5xl p-4 pt-0 mx-auto">
       <header
-        class="relative z-20 w-56 h-20 rounded-2xl flex items-center justify-between p-4 bg-rhino-800">
+        class="relative z-20 w-60 px-8 pt-4 pb-2 h-16 rounded-b-2xl flex items-center justify-between bg-rhino-800 shadow-extra">
         <Logo />
         <Burger />
       </header>

@@ -23,7 +23,8 @@ const props = defineProps({
 });
 </script>
 <template>
-  <header class="dark:text-rhino-100 border-b-2 border-rhino-50/20 mb-6">
+  <header
+    class="dark:text-rhino-100 border-b-2 border-rhino-50/20 mb-6 relative z-10">
     <span class="flex items-center gap-2">
       <Tag v-for="tag in tags" :key="tag"
         ><Icon :name="iconNameStore.getIconName(tag)" />{{ tag }}</Tag

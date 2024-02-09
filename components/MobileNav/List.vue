@@ -6,7 +6,7 @@ const links = useMainNavLinks();
 
 <template>
   <nav
-    class="absolute w-14 top-28 z-[12] px-4 py-4 rounded-2xl bg-rhino-800 transition-all ease-in-out"
+    class="absolute w-14 top-28 z-[12] px-4 py-4 rounded-2xl bg-rhino-800 transition-all ease-in-out shadow-extra"
     :class="burgerStore.checked ? 'left-4' : '-left-20'">
     <ul class="flex flex-col gap-2">
       <li

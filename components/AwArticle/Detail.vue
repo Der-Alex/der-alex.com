@@ -1,6 +1,6 @@
 <template>
   <section
-    class="rounded-2xl bg-rhino-900 shadow-sm shadow-rhino-900 p-8 mt-8 dark:text-rhino-100 font-extra2">
+    class="rounded-2xl bg-rhino-900 shadow-extra p-8 mt-8 dark:text-rhino-100 font-extra2">
     <slot />
   </section>
 </template>

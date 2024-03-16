@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useBurgerStore } from '~/store/burgerStore';
 const burgerStore = useBurgerStore();
+const close = () => setTimeout(() => (burgerStore.checked = false), 200);
 const props = defineProps({
   url: {
     type: String,
@@ -25,7 +26,8 @@ const props = defineProps({
 <template>
   <NuxtLink
     :to="url"
-    class="absolute h-14 group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0">
+    class="absolute h-14 group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0"
+    @click="close">
     <Icon
       :name="iconName"
       alt="Webdesign"

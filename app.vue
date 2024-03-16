@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useBurgerStore } from './store/burgerStore';
-
 const burgerStore = useBurgerStore();
 </script>
 <template>

@@ -54,7 +54,7 @@ const svgColor = computed(() => {
 <template>
   <article class="flex flex-col">
     <div
-      class="rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative flex flex-col h-full"
+      class="overflow-hidden rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative flex flex-col h-full"
       :class="articleColor">
       <AwArticleHeader
         :url="article._path"

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - frontend
+networks:
+  frontend:
+    driver: bridge

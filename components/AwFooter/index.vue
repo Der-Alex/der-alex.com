@@ -12,7 +12,7 @@
       <ul class="flex items-center gap-2 mt-2 md:mt-0 md:ml-auto">
         <li>
           <NuxtLink
-            class="text-black/70 hover:text-amber-400 transition-all"
+            class="footer-link text-black/70 hover:text-amber-400 transition-all"
             to="/datenschutz"
             >Datenschutz</NuxtLink
           >
@@ -20,7 +20,7 @@
         <li>
           <NuxtLink
             to="/impressum"
-            class="text-black/70 hover:text-amber-400 transition-all"
+            class="footer-link text-black/70 hover:text-amber-400 transition-all"
             >Impressum</NuxtLink
           >
         </li>

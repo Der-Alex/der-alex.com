@@ -30,7 +30,7 @@ footer strong {
 pre code {
   background: initial;
 }
-a {
+a:not(.article-link):not(.footer-link):not(.nav-link) {
   @apply text-amber-400 hover:text-amber-500;
 }
 table {

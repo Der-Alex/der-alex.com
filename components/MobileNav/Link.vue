@@ -26,7 +26,7 @@ const props = defineProps({
 <template>
   <NuxtLink
     :to="url"
-    class="absolute h-14 group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0"
+    class="nav-link absolute h-14 group rounded-2xl flex items-center justify-center bg-rhino-800 pl-0"
     @click="close">
     <Icon
       :name="iconName"

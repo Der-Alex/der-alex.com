@@ -30,9 +30,9 @@ const props = defineProps({
         ><Icon :name="iconNameStore.getIconName(tag)" />{{ tag }}</Tag
       >
     </span>
-    <h2 v-if="isDetail" class="my-4 text-3xl text-balance">
+    <h1 v-if="isDetail" class="my-4 text-3xl text-balance">
       {{ title }}
-    </h2>
+    </h1>
     <NuxtLink
       :to="url"
       v-else

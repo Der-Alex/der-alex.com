@@ -14,9 +14,22 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   content: {
+    markdown: {
+      anchorLinks: false,
+    },
     highlight: {
       theme: 'github-dark',
-      preload: ['ts', 'js', 'json', 'vue', 'yaml', 'css', 'html', 'bash'],
+      preload: [
+        'ts',
+        'js',
+        'json',
+        'vue',
+        'yaml',
+        'css',
+        'html',
+        'bash',
+        'php',
+      ],
     },
   },
 });

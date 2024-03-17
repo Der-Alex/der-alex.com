@@ -18,6 +18,35 @@ const burgerStore = useBurgerStore();
   </div>
 </template>
 <style>
+code,
+p strong {
+  padding: 2px;
+  border-radius: 4px;
+  @apply bg-rhino-950;
+}
+footer strong {
+  background-color: initial;
+}
+pre code {
+  background: initial;
+}
+a {
+  @apply text-amber-400 hover:text-amber-500;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  @apply rounded-3xl border border-rhino-700;
+}
+th,
+td {
+  @apply border border-rhino-700 px-4 py-2;
+}
+[data-content-id] {
+  h2 {
+    @apply text-rhino-400 text-xl font-bold mt-8 mb-4;
+  }
+}
 .page-enter-active,
 .page-leave-active {
   transition: all 0.125s;

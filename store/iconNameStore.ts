@@ -34,6 +34,16 @@ export const useIconNameStore = defineStore({
           case 'kubernetes':
           case 'devops':
             icon = 'mdi:kubernetes';
+            break;
+          case 'wordpress':
+            icon = 'fa6-brands:wordpress';
+            break;
+          case 'linux':
+            icon = 'ph:linux-logo';
+            break;
+          case 'php':
+            icon = 'fa6-brands:php';
+            break;
           default:
             break;
         }

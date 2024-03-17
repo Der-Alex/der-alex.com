@@ -4,7 +4,9 @@ const burgerStore = useBurgerStore();
 </script>
 <template>
   <Html class="dark" />
-  <Body class="bg-rhino-950 min-h-screen" />
+  <Body
+    class="bg-rhino-950"
+    :class="{ 'mobile-menu-open': burgerStore.checked }" />
 
   <div class="is-wrapper max-w-5xl mx-auto">
     <MainNav class="hidden lg:block w-full max-w-5xl px-4 mx-auto" />
@@ -26,12 +28,18 @@ const burgerStore = useBurgerStore();
   filter: blur(1rem);
 }
 .is-wrapper {
-  min-height: 100svh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
 }
 #__nuxt {
-  min-height: 100svh;
+  min-height: 100dvh;
+}
+@media screen and (max-width: 1023px) {
+  .mobile-menu-open {
+    height: 100dvh;
+    overflow: hidden;
+  }
 }
 </style>

@@ -33,9 +33,12 @@ const props = defineProps({
       alt="Webdesign"
       class="transition-all duration-150 text-2xl" />
     <span
-      class="transition-[width] ease-out ml-6 overflow-hidden group-hover:w-36"
+      class="transition-[width] ease-out ml-6 overflow-hidden"
       :class="[
-        { 'w-32': burgerStore.checked, 'w-0': !burgerStore.checked },
+        {
+          'w-32 group-hover:w-36': burgerStore.checked,
+          'w-0': !burgerStore.checked,
+        },
         `delay-[${delay}ms]`,
       ]"
       >{{ text }}</span

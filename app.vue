@@ -4,13 +4,16 @@ const burgerStore = useBurgerStore();
 </script>
 <template>
   <Html class="dark" />
-  <Body class="bg-rhino-950 max-w-5xl mx-auto" />
-  <MainNav class="hidden lg:block max-w-5xl px-4 mx-auto" />
-  <MobileNav />
-  <NuxtLayout>
-    <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
-  </NuxtLayout>
-  <AwFooter class="max-w-5xl px-4 mx-auto" />
+  <Body class="bg-rhino-950 min-h-screen" />
+
+  <div class="is-wrapper max-w-5xl mx-auto">
+    <MainNav class="hidden lg:block w-full max-w-5xl px-4 mx-auto" />
+    <MobileNav />
+    <NuxtLayout>
+      <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
+    </NuxtLayout>
+    <AwFooter class="w-full max-w-5xl px-4 mx-auto" />
+  </div>
 </template>
 <style>
 .page-enter-active,
@@ -21,5 +24,14 @@ const burgerStore = useBurgerStore();
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+.is-wrapper {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+#__nuxt {
+  min-height: 100svh;
 }
 </style>

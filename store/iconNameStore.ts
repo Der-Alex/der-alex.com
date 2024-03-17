@@ -28,8 +28,10 @@ export const useIconNameStore = defineStore({
           case 'css':
             icon = 'fa6-brands:css3';
             break;
-          case 'kubernetes':
           case 'docker':
+            icon = 'mdi:docker';
+            break;
+          case 'kubernetes':
           case 'devops':
             icon = 'mdi:kubernetes';
           default:

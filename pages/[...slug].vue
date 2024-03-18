@@ -2,7 +2,7 @@
 import type { Article } from '~/interfaces/article';
 </script>
 <template>
-  <main class="max-w-5xl px-4 mx-auto wrapper">
+  <main class="w-full max-w-5xl px-4 mx-auto wrapper">
     <ContentDoc v-slot="{ doc }">
       <AwArticle :article="(doc as Article)" :is-detail="true">
         <AwArticleDetail>

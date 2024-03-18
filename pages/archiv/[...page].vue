@@ -5,7 +5,7 @@ const category = '';
 const { query } = await useCategory(urlPart, category);
 </script>
 <template>
-  <main class="max-w-5xl px-4 mx-auto wrapper">
+  <main class="w-full max-w-5xl px-4 mx-auto wrapper">
     <ContentList :query="query" v-slot="{ list }">
       <AwArticleList :articles="(list as Article[])" />
     </ContentList>

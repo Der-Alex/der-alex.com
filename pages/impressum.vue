@@ -1,5 +1,7 @@
 <template>
   <div class="max-w-5xl px-4 mx-auto wrapper">
+    <Meta name="robots" content="noindex, nofollow" />
+
     <AwArticleDetail class="flex flex-col gap-4 text-rhino-100">
       <h1 class="text-2xl">Impressum</h1>
       <p>(Angaben gemäß § 5 TMG)</p>

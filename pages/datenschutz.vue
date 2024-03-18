@@ -1,5 +1,7 @@
 <template>
   <div class="max-w-5xl px-4 mx-auto wrapper">
+    <Meta name="robots" content="noindex, nofollow" />
+
     <AwArticleDetail class="flex flex-col gap-4 text-rhino-100">
       <h1 class="text-2xl">Datenschutz</h1>
       <p><strong>Datenschutzerklärung</strong></p>

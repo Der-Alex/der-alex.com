@@ -5,7 +5,7 @@ RUN npm i -g pnpm
 RUN pnpm i
 RUN pnpm run build
 ENTRYPOINT ["node"]
-CMD ["/app/.output/server/index.mjs"]
+CMD [".output/server/index.mjs"]
 
 #ENTRYPOINT ["tail"]
 #CMD ["-f","/dev/null"]

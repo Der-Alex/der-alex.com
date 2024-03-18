@@ -1,10 +1,11 @@
 FROM node:lts
 WORKDIR /app
 COPY . .
-RUN npm i -g pnpm; pnpm i; pnpm run build;
-EXPOSE 3000
+RUN npm i -g pnpm
+RUN pnpm i
+RUN pnpm run build
 ENTRYPOINT ["node"]
-CMD [".output/server/index.mjs"]
+CMD ["/app/.output/server/index.mjs"]
 
 #ENTRYPOINT ["tail"]
 #CMD ["-f","/dev/null"]

@@ -5,6 +5,8 @@ category: DevOps
 tags:
   - Linux
 created: 2013-07-08
+sitemap:
+  lastmod: 2024-03-19
 ---
 Der Webserver läuft unter einem separaten Benutzerkonto `www-data`. Dieses Konto sollte allerdings nicht als Besitzer in der Webverzeichnisstruktur genutzt werden. Deshalb sollte hierfür ein weiteres Benutzerkonto angelegt werden. Dies macht man wie folgt in der Linux Konsole. Den Benutzer nenne ich einfach mal `www-user`.
 

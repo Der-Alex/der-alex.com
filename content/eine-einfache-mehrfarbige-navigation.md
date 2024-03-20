@@ -7,6 +7,8 @@ tags:
   - HTML
   - WordPress
 created: 2013-07-07
+sitemap:
+  lastmod: 2024-03-19
 ---
 Zuerst erstellt man eine Navigation. Nach altbewährter Methode macht man dies mit einer Liste.
 

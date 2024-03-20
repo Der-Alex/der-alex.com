@@ -5,7 +5,13 @@ export default defineNuxtConfig({
     host: '0.0.0.0',
     port: 3000,
   },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-icon'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'nuxt-icon',
+  ],
   components: {
     global: true,
     dirs: ['~/components'],
@@ -13,7 +19,17 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
+  routeRules: {
+    '/whoami': { sitemap: false },
+    '/datenschutz': { sitemap: false },
+    '/impressum': { sitemap: false },
+  },
+
   content: {
+    documentDriven: true,
     markdown: {
       anchorLinks: false,
     },
@@ -31,5 +47,8 @@ export default defineNuxtConfig({
         'php',
       ],
     },
+  },
+  site: {
+    url: 'https://www.der-alex.com',
   },
 });

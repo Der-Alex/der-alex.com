@@ -24,7 +24,7 @@
         Person bezogen werden. Personenbezogene Daten, insbesondere Name,
         Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis
         erhoben. Ohne ihre Einwilligung erfolgt keine Weitergabe der Daten an
-        Dritte.
+        Dritte
       </p>
       <p>
         Wenn sie unsere Dienste in Anspruch nehmen, erheben, verarbeiten und

@@ -5,6 +5,8 @@ category: Development
 tags:
   - PHP
 created: 2013-07-14
+sitemap:
+  lastmod: 2024-03-19
 ---
 PHP bietet ab Version 5 von Haus aus autoload-Funktionen. Sofern man sich an bestimmte Konventionen hält, kann man sehr effizient Klassen laden, ohne vorher zu wissen, ob es sie überhaupt gibt. Um das zu verdeutlichen erstelle ich ein einfaches Beispiel.
 <br/><br/>

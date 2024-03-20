@@ -6,6 +6,8 @@ tags:
   - WordPress
   - Linux
 created: 2013-07-05
+sitemap:
+  lastmod: 2024-03-19
 ---
 
 Nach etwas Recherche bin ich auf 2 WordPress Artikel gestoßen, die die Lösung relativ gut beschreiben.

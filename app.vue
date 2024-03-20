@@ -11,9 +11,7 @@ const burgerStore = useBurgerStore();
   <div class="is-wrapper max-w-5xl mx-auto">
     <MainNav class="hidden lg:block w-full max-w-5xl px-4 mx-auto" />
     <MobileNav />
-    <NuxtLayout>
-      <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
-    </NuxtLayout>
+    <NuxtPage :class="{ 'blur-[2px]': burgerStore.checked }" />
     <AwFooter class="w-full max-w-5xl px-4 mx-auto" />
   </div>
 </template>

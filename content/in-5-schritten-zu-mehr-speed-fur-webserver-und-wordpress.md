@@ -6,6 +6,8 @@ tags:
   - Linux
   - WordPress
 created: 2013-07-18
+sitemap:
+  lastmod: 2024-03-19
 ---
 Gestern habe ich meinen Webserver und meinen WordPress Blog weiter getuned. Mich hat es vor allem gestört, dass mein Server teilweise 4 Sekunden benötigt hat, um meine Seite anzuzeigen. Zuerst dachte ich, es liegt an dem Virtuellen Server und dass dieser mit anderen Kunden geteilt wird und dadurch Bandbreite verloren geht. Doch damit wollte ich mich nich zufrieden geben. Ebenso wollte ich nicht auf meine bestehende Apache-PHP-MySQL Installation verzichten und diese komplett austauschen. Letzendlich habe ich ein wenig recherchiert und bin auf 5 wesentliche Schritte gestoßen, die bei der Optimierung von WordPress und Webserver einiges an Geschwindigkeit herauskitzeln können.
 

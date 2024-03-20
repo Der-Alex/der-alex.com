@@ -6,6 +6,8 @@ tags:
   - CSS
   - HTML
 created: 2013-07-11
+sitemap:
+  lastmod: 2024-03-19
 ---
 Webseiten so zu gestalten, dass sie sich bei Bedarf in Größe und Aussehen verändern. Klingt erst mal kompliziert. Noch komplizierter wird es, wenn man bedenkt wie viele unterschiedliche Auflösungen es mitlerweile gibt. Eine Möglichkeit um sich das Leben leichter zu machen ist das [Unsemantic Framework](https://unsemantic.com){:target="_blank"} von [Nathan Smith](https://sonspring.com){:target="_blank"}. Der Vorteil dabei: Durch das Fluid Grid Framework muss man sich um die Breite einer Auflösung keine Gedanken mehr machen.
 <br/><br/>

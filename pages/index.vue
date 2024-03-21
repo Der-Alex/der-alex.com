@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import type { Article } from '~/interfaces/article';
+useHead({
+  title: 'Der-Alex.com | Frontend-Entwicklung und Webdesign auf Deutsch!',
+  meta: [
+    {
+      name: 'title',
+      content: 'Der-Alex.com |Frontend-Entwicklung und Webdesign auf Deutsch!',
+    },
+    {
+      name: 'description',
+      content:
+        'Tauche ein in die Welt der modernen Webentwicklung und Webgestaltung mit meinem Blog. Hier teile ich meine Leidenschaft und langjährige Expertise für Frontend-Technologien, innovative Designs und bewährte Entwicklungspraktiken. Egal, ob du ein erfahrener Entwickler oder ein Neuling in der Webwelt bist, hier findest du wertvolle Ressourcen, Tipps und Inspiration.',
+    },
+  ],
+});
 </script>
 
 <template>

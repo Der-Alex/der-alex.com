@@ -17,7 +17,8 @@ const burgerStore = useBurgerStore();
 </template>
 <style>
 code,
-p strong {
+p strong,
+li strong {
   padding: 2px;
   border-radius: 4px;
   @apply bg-rhino-950;
@@ -43,6 +44,16 @@ td {
 [data-content-id] {
   h2 {
     @apply text-rhino-400 text-xl font-bold mt-8 mb-4;
+  }
+  h3 {
+    @apply text-rhino-400 text-base font-bold mt-6 mb-2;
+  }
+  li {
+    @apply pl-4 relative;
+    &::before {
+      content: ' ';
+      @apply absolute left-0 top-2 rounded-full w-2 h-2 bg-rhino-400;
+    }
   }
 }
 .page-enter-active,

@@ -6,11 +6,11 @@ tags:
   - Kubernetes
   - Docker
   - Linux
-created: 2024-03-23
+created: 2024-03-22
 sitemap:
   lastmod: 2024-03-25
 ---
-## Zusammenfassung Teil 1
+## Zusammenfassung
 In [Teil 1](/einfaches-kubernetes-setup-mit-lokalen-dockerfiles-teil-1) haben wir uns um die grundlegende Konfiguration von Kubernetes gekümmert und unseren Cluster lauffähig gemacht.
 Nun wollen wir sicherstellen, dass unsere Domain zukünftig automatisch ein SSL Zertifikat enthält und über&nbsp;**https** erreichbar ist. In den letzten Jahren hat sich die freie und gemeinnützige Zertifizierungsstelle [Let's Enctypt](https://letsencrypt.org/de/){:target="_blank"} für das Erstellen von SSL Zertifikaten etabliert. Damit wollen wir unser Zertifikat erstellen. Allerdings soll das möglichst automatisiert passieren. Um das zu ermöglichen, greifen wir auf passende Helm Charts zurück.
 

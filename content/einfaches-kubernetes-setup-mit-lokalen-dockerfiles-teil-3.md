@@ -6,11 +6,11 @@ tags:
   - Kubernetes
   - Docker
   - Linux
-created: 2024-03-24
+created: 2024-03-23
 sitemap:
   lastmod: 2024-03-25
 ---
-## Zusammenfassung Teil 1 und 2
+## Zusammenfassung
 In [Teil 1](/einfaches-kubernetes-setup-mit-lokalen-dockerfiles-teil-1) haben wir uns um die grundlegende Konfiguration von Kubernetes gekümmert und unseren Cluster lauffähig gemacht.
 
 In [Teil 2](/einfaches-kubernetes-setup-mit-lokalen-dockerfiles-teil-2) haben wir Helm kennen gelernt und einen Helm Chart für Zertifikatsstellen installiert, sowie eine eigene Kubernetes Konfiguration für Let's Encrypt erstellt.

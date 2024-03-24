@@ -56,7 +56,7 @@ a2enmod modulname
 
 ## Apache Webserver für schwache Hardware umkonfigurieren
 
-Der Apache Webserver bietet ein Modul, welches vor allem für schwächere Hardware interessant ist. Ich habe auf meinem Virtual Server beispielsweise nur einen Single Core Prozessor und 1GB Ram. Hier bietet sich das Multi-Processing-Modul [MPM-Prefork](https://httpd.apache.org/docs/2.2/mod/prefork.html){:target="_blank"} an. Das Modul installiert man auf Debian Derivaten wie Ubuntu mit **apt**.
+Der Apache Webserver bietet ein Modul, welches vor allem für schwächere Hardware interessant ist. Ich habe auf meinem Virtual Server beispielsweise nur einen Single Core Prozessor und 1GB Ram. Hier bietet sich das Multi-Processing-Modul [MPM-Prefork](https://httpd.apache.org/docs/2.2/mod/prefork.html){:target="_blank"} an. Das Modul installiert man auf Debian Derivaten wie Ubuntu mit&nbsp;**apt**.
 
 ```bash
 apt-get install apache2-mpm-prefork
@@ -74,20 +74,20 @@ Danach kann man in der apache.conf das Modul konfigurieren.
 </IfModule>
 ```
 
-**StartServers** gibt die Anzahl der Serverprozesse nach dem Start des Apache Deamons an. **MaxSpareServers** steht für die Maximale Anzahl der unbeschäftigten Kindprozesse des Servers. **MinSpareServers** demnach für die minimalte Anzahl. Mit **MaxClients** wird die maximale Anzahl der Kindprozesse zur Behandlung von Anfragen angegeben.
+**StartServers** gibt die Anzahl der Serverprozesse nach dem Start des Apache Deamons an.&nbsp;**MaxSpareServers** steht für die Maximale Anzahl der unbeschäftigten Kindprozesse des Servers.&nbsp;**MinSpareServers** demnach für die minimalte Anzahl. Mit&nbsp;**MaxClients** wird die maximale Anzahl der Kindprozesse zur Behandlung von Anfragen angegeben.
 
-Mit **MaxRequestsPerChild** kann man die Obergrenze für die Anzahl von Anfragen pro Kindprozess bestimmen.
+Mit&nbsp;**MaxRequestsPerChild** kann man die Obergrenze für die Anzahl von Anfragen pro Kindprozess bestimmen.
 Interessierte können sich [hier](https://httpd.apache.org/docs/2.2/mod/mpm_common.html){:target="_blank"} die entsprechenden Direktiven genauer ansehen. Nach der Konfiguration wird noch einmal der Webserver neu gestartet und schon kann es mit dem nächsten Schritt weiter gehen.
 
 ## PHP Caching mit APC-Cache
 
-Zum Cachen des PHP Codes benutze ich den [APC-Cache](https://de.wikipedia.org/wiki/Alternative_PHP_Cache){:target="_blank"}. Installieren lässt sich dieser via **apt**. 
+Zum Cachen des PHP Codes benutze ich den [APC-Cache](https://de.wikipedia.org/wiki/Alternative_PHP_Cache){:target="_blank"}. Installieren lässt sich dieser via&nbsp;**apt**. 
 
 ```bash
 apt-get install php-apc
 ```
 
-Nach der Installation des APC Moduls findet man die Konfigurationsdatei unter **/etc/php5/conf.d/apc.ini**. Fürs erste reichen folgende Einstellungen.
+Nach der Installation des APC Moduls findet man die Konfigurationsdatei unter&nbsp;**/etc/php5/conf.d/apc.ini**. Fürs erste reichen folgende Einstellungen.
 
 ```bash
 extension=apc.so
@@ -100,7 +100,7 @@ In meiner Konfiguration ist ein Shared Memory Segment mit der Größe von 64MB a
 
 ## Den APC Cache auf WordPress anwenden
 
-Die einfachste Möglichkeit APC mit WordPress zu nutzen ist das Plugin [APC Object Cache Backend](https://wordpress.org/plugins/apc/){:target="_blank"}. Das Plugin lässt sich über das WordPress Admin Menü installieren. Danach muss noch die Datei **object-cache.php** aus dem Plugin Verzeichnis in das Verzeichnis wp-content kopiert werden. Womit wir auch schon beim letzten Punkt angekommen sind.
+Die einfachste Möglichkeit APC mit WordPress zu nutzen ist das Plugin [APC Object Cache Backend](https://wordpress.org/plugins/apc/){:target="_blank"}. Das Plugin lässt sich über das WordPress Admin Menü installieren. Danach muss noch die Datei&nbsp;**object-cache.php** aus dem Plugin Verzeichnis in das Verzeichnis wp-content kopiert werden. Womit wir auch schon beim letzten Punkt angekommen sind.
 
 ## Zusätzlicher Filecache für WordPress
 

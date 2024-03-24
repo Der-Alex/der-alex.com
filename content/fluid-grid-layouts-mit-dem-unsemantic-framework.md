@@ -12,7 +12,7 @@ sitemap:
 Webseiten so zu gestalten, dass sie sich bei Bedarf in Größe und Aussehen verändern. Klingt erst mal kompliziert. Noch komplizierter wird es, wenn man bedenkt wie viele unterschiedliche Auflösungen es mitlerweile gibt. Eine Möglichkeit um sich das Leben leichter zu machen ist das [Unsemantic Framework](https://unsemantic.com){:target="_blank"} von [Nathan Smith](https://sonspring.com){:target="_blank"}. Der Vorteil dabei: Durch das Fluid Grid Framework muss man sich um die Breite einer Auflösung keine Gedanken mehr machen.
 <br/><br/>
 
-**Unsemantic** ist ein in CSS geschriebenes **Fluid Grid Framework**. Das bedeutet, dass es CSS Klassen für Webseiten mit variabelen Breiten anbietet. Diese Klassen bindet man einfach in sein HTML Layout ein und den Rest der Magie erledigt das Framework. Um das Framework nutzen zu können, muss man vorher einmal die entsprechende CSS-Datei von [https://unsemantic.com](https://unsemantic.com){:target="_blank"} herunterladen und im eigenen HTML-Quelltext einbinden. Danach kann man auch schon los legen.
+**Unsemantic** ist ein in CSS geschriebenes&nbsp;**Fluid Grid Framework**. Das bedeutet, dass es CSS Klassen für Webseiten mit variabelen Breiten anbietet. Diese Klassen bindet man einfach in sein HTML Layout ein und den Rest der Magie erledigt das Framework. Um das Framework nutzen zu können, muss man vorher einmal die entsprechende CSS-Datei von [https://unsemantic.com](https://unsemantic.com){:target="_blank"} herunterladen und im eigenen HTML-Quelltext einbinden. Danach kann man auch schon los legen.
 <br/><br/>
 
 Hierzu ein kleines Beispiel mit einer 3-spaltigen Webseite. 
@@ -34,7 +34,7 @@ Hierzu ein kleines Beispiel mit einer 3-spaltigen Webseite.
 </div>
 ```
 
-Zuerst definiert man eine `grid-container` Klasse. So weiß das Framework, dass es an dieser Stelle arbeiten soll. In den weiteren 3 Div-Elementen definiert man dann jeweils die Klasse `grid-33`. Die Klassennamen für variabele Breiten im Framework sind mit `grid-x` definiert und können in **5%** Schritten genutzt werden. Ausnahmen sind die Breiten für **33%** und **66%**. Schön ist, dass die auch gleich auf mehrere Nachkommastellen genau sind. So wird z.B. das 3-Spalten Layout mit je 33% Breite relativ genau auf 100% Breite verteilt.
+Zuerst definiert man eine `grid-container` Klasse. So weiß das Framework, dass es an dieser Stelle arbeiten soll. In den weiteren 3 Div-Elementen definiert man dann jeweils die Klasse `grid-33`. Die Klassennamen für variabele Breiten im Framework sind mit `grid-x` definiert und können in&nbsp;**5%** Schritten genutzt werden. Ausnahmen sind die Breiten für&nbsp;**33%** und&nbsp;**66%**. Schön ist, dass die auch gleich auf mehrere Nachkommastellen genau sind. So wird z.B. das 3-Spalten Layout mit je 33% Breite relativ genau auf 100% Breite verteilt.
 <br/><br/>
 
 Nun möchte ich aber, dass meine Bereiche an anderer Stelle stehen sollen. Auch kein Problem. Dafür gibt es die Klassen `push-x` und `pull-x`. So lassen sich einzelne Elemente neu ausrichten.

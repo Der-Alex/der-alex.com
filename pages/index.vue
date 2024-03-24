@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import type { Article } from '~/interfaces/article';
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+
+const query: QueryBuilderParams = {
+  path: '/',
+  limit: 6,
+  sort: [{ created: -1 }],
+};
+
 useHead({
-  title: 'Der-Alex.com | Frontend-Entwicklung und Webdesign auf Deutsch!',
+  title:
+    'Der-Alex.com | Frontend-Entwicklung Webdesign und DevOps auf Deutsch!',
   meta: [
     {
       name: 'title',
-      content: 'Der-Alex.com |Frontend-Entwicklung und Webdesign auf Deutsch!',
+      content:
+        'Der-Alex.com | Frontend-Entwicklung Webdesign und DevOps auf Deutsch!',
     },
     {
       name: 'description',
@@ -18,7 +28,7 @@ useHead({
 
 <template>
   <main class="w-full max-w-5xl px-4 mx-auto wrapper">
-    <ContentList path="/" v-slot="{ list }">
+    <ContentList path="/" :query="query" v-slot="{ list }">
       <AwArticleList :articles="(list as Article[])" />
     </ContentList>
     <AwArticleDetail class="flex flex-col gap-4">

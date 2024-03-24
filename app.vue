@@ -41,7 +41,7 @@ th,
 td {
   @apply border border-rhino-700 px-4 py-2;
 }
-[data-content-id] {
+.article-content {
   h2 {
     @apply text-rhino-400 text-xl font-bold mt-8 mb-4;
   }

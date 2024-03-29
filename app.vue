@@ -41,11 +41,11 @@ th,
 td {
   @apply border border-rhino-700 px-4 py-2;
 }
-.article-content :not(.reset) {
-  h2 {
+.article-content {
+  h2:not(.reset) {
     @apply text-rhino-400 text-xl font-bold mt-8 mb-4;
   }
-  h3 {
+  h3:not(.reset) {
     @apply text-rhino-400 text-base font-bold mt-6 mb-2;
   }
   ul:not(.list-none) li {

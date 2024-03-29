@@ -47,7 +47,7 @@ useHead({
       </h2>
 
       <p class="text-lg font-bold">Was findest du auf meinem Blog?</p>
-      <ul>
+      <ul class="list-none">
         <li class="mt-4 mb-6">
           <div class="icons flex gap-2">
             <Tag>

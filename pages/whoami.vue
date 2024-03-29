@@ -61,7 +61,7 @@ const iconNameStore = useIconNameStore();
           </li>
           <li>
             <Icon :name="iconNameStore.getIconName('graphql')" alt="NodeJs" />
-            GraphQl
+            GraphQL
           </li>
         </ul>
         <h3 class="text-lg sm:text-xl text-rhino-400">

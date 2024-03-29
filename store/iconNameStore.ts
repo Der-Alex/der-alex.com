@@ -44,6 +44,18 @@ export const useIconNameStore = defineStore({
           case 'php':
             icon = 'fa6-brands:php';
             break;
+          case 'techstack':
+            icon = 'tdesign:system-code';
+            break;
+          case 'graphql':
+            icon = 'mdi:graphql';
+            break;
+          case 'react':
+            icon = 'mdi:react';
+            break;
+          case 'tailwind':
+            icon = 'mdi:tailwind';
+            break;
           default:
             break;
         }

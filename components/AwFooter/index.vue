@@ -4,7 +4,7 @@
     <div
       class="rounded-t-2xl bg-rhino-800 min-h-20 p-8 flex flex-col md:flex-row flex-wrap items-center justify-center shadow-extra">
       <p class="font-mono min-w-28 text-black/70">
-        <strong>
+        <strong class="reset">
           Made with
           <Icon name="pixelarticons:heart" class="text-red-500"
         /></strong>

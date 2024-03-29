@@ -17,7 +17,7 @@ const burgerStore = useBurgerStore();
 </template>
 <style>
 code,
-p strong,
+p strong:not(.reset),
 li strong {
   padding: 2px;
   border-radius: 4px;

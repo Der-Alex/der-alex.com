@@ -22,6 +22,11 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
+  router: {
+    options: {
+      strict: true
+    }
+  },
   routeRules: {
     '/whoami': { sitemap: false },
     '/datenschutz': { sitemap: false },
@@ -29,7 +34,13 @@ export default defineNuxtConfig({
   },
 
   content: {
-    documentDriven: true,
+    documentDriven: {
+      navigation: false,
+      page: false,
+      surround: false
+    },
+  
+    
     markdown: {
       anchorLinks: false,
     },

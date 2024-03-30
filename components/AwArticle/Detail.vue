@@ -2,13 +2,13 @@
 const props = defineProps({
   classes: {
     type: String,
-    default: 'bg-rhino-900'
+    default: 'bg-rhino-900 mt-8'
   }
 })
 </script>
 <template>
   <section
-    class="article-content rounded-2xl shadow-extra p-8 mt-8 dark:text-rhino-100 font-extra2" :class="classes">
+    class="article-content rounded-2xl shadow-extra p-8 dark:text-rhino-100 font-extra2" :class="classes">
     <slot />
   </section>
 </template>

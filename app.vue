@@ -16,6 +16,9 @@ const burgerStore = useBurgerStore();
   </div>
 </template>
 <style>
+[data-content-id] > :first-child {
+  margin-top: 0 !important;
+}
 code,
 p strong:not(.reset),
 li strong {

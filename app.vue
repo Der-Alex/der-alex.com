@@ -16,7 +16,7 @@ useHead(() => ({
 
 </script>
 <template>
-  <Html class="dark" />
+  <Html class="dark" lang="de" />
   <Body
     class="bg-rhino-950"
     :class="{ 'mobile-menu-open': burgerStore.checked }" />

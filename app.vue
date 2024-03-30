@@ -1,13 +1,25 @@
 <script setup lang="ts">
+import { routerKey } from 'vue-router';
 import { useBurgerStore } from './store/burgerStore';
+const requestURL = useRequestURL();
+const route = useRoute();
 const burgerStore = useBurgerStore();
+
+useHead(() => ({
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://${requestURL.host}${route.path === '/' ? '' : route.path}`
+    }
+  ]
+}))
+
 </script>
 <template>
   <Html class="dark" />
   <Body
     class="bg-rhino-950"
     :class="{ 'mobile-menu-open': burgerStore.checked }" />
-
   <div class="is-wrapper max-w-5xl mx-auto">
     <MainNav class="hidden lg:block w-full max-w-5xl px-4 mx-auto" />
     <MobileNav />

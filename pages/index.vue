@@ -10,12 +10,12 @@ const query: QueryBuilderParams = {
 
 useHead({
   title:
-    'Der-Alex.com | Frontend-Entwicklung Webdesign und DevOps auf Deutsch!',
+    'Frontend-Entwicklung, Webdesign und DevOps auf Deutsch! | www.der-alex.com',
   meta: [
     {
       name: 'title',
       content:
-        'Der-Alex.com | Frontend-Entwicklung Webdesign und DevOps auf Deutsch!',
+        'Frontend-Entwicklung, Webdesign und DevOps auf Deutsch! | www.der-alex.com',
     },
     {
       name: 'description',

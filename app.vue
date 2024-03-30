@@ -10,7 +10,12 @@ useHead(() => ({
     {
       rel: 'canonical',
       href: `https://${requestURL.host}${route.path === '/' ? '' : route.path}`
-    }
+    },
+    {
+      rel: 'favicon',
+      href: 'favicon.ico',
+      type: 'image/x-icon'
+  }
   ]
 }))
 

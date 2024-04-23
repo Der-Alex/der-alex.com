@@ -5,7 +5,6 @@ const iconNameStore = useIconNameStore();
 </script>
 <template>
   <div class="w-full max-w-5xl px-4 mx-auto wrapper">
-    <Meta name="robots" content="noindex, nofollow" />
     <Title>Who am I?</Title>
     <AwArticleDetail class="flex flex-col gap-4 mt-0" :classes="'bg-rhino-800'">
       <div class="flex flex-col items-center sm:flex-row justify-between">

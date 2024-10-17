@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   devServer: {
     host: '0.0.0.0',
     port: 3000,
   },
+
   modules: [
     '@nuxt/content',
     '@nuxtjs/sitemap',
@@ -12,21 +14,26 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
   ],
+
   components: {
     global: true,
     dirs: ['~/components'],
   },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+
   sitemap: {
     strictNuxtContentPaths: true,
   },
+
   router: {
     options: {
       strict: true
     }
   },
+
   routeRules: {
     '/whoami': { sitemap: false },
     '/datenschutz': { sitemap: false },
@@ -59,7 +66,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   site: {
     url: 'https://www.der-alex.com',
   },
+
+  compatibilityDate: '2024-10-17',
 });

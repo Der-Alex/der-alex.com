@@ -8,46 +8,66 @@ const iconNameStore = useIconNameStore();
     <Title>Who am I?</Title>
     <AwArticleDetail class="flex flex-col gap-4 mt-0" :classes="'bg-rhino-800'">
       <div class="flex flex-col items-center sm:flex-row justify-between">
-        <h1 class="transition-all font-bold text-xl mb-4 sm:mb-0 sm:text-3xl md:text-4xl sm:mx-auto text-rhino-950">
-          Hallo! Ich bin
-          Der Alex</h1>
-        <figure class="rounded-2xl max-w-64 sm:max-w-44 bg-rhino-950 shadow-extra overflow-hidden text-center">
-          <img src="/img/alex.webp" alt="Alex hat VR für sich entdeckt" class="contrast-100 grayscale scale-x-[-1]" />
-          <figcaption class="text-xs text-rhino-400 px-4 py-2">Alex hat VR für sich entdeckt</figcaption>
+        <h1
+          class="transition-all font-bold text-xl mb-4 sm:mb-0 sm:text-3xl md:text-4xl sm:mx-auto text-rhino-950">
+          Hallo! Ich bin Der Alex
+        </h1>
+        <figure
+          class="rounded-2xl max-w-64 sm:max-w-44 bg-rhino-950 shadow-extra overflow-hidden text-center">
+          <img
+            src="/img/alex.webp"
+            alt="Alex hat VR für sich entdeckt"
+            class="contrast-100 grayscale scale-x-[-1]" />
+          <figcaption class="text-xs text-rhino-400 px-4 py-2">
+            Alex hat VR für sich entdeckt
+          </figcaption>
         </figure>
       </div>
       <div class="transition-all py-4 text-rhino-300 sm:text-xl space-y-4">
-        <p>Hey! Schön, dass du dich auf meine Seite verirrt hast. Ich bin der Alex, Vollzeit-Doppel-Vater und mache
-          irgendwas mit Webseiten.
-          Dass es zumindest irgendwas mit Computern
-          werden soll, war mit eigentlich schon mit 6 Jahren klar, als ich zum Geburtstag einen <strong
-            class="reset">Amiga
-            500</strong> geschenkt bekommen habe.
+        <p>
+          Hey! Schön, dass du dich auf meine Seite verirrt hast. Ich bin der
+          Alex, Vollzeit-Doppel-Vater und mache irgendwas mit Webseiten. Dass es
+          zumindest irgendwas mit Computern werden soll, war mit eigentlich
+          schon mit 6 Jahren klar, als ich zum Geburtstag einen
+          <strong class="reset">Amiga 500</strong> geschenkt bekommen habe.
         </p>
-        <p>Nach meiner Ausbildung und vielen langen Jahren im Bereich der Webentwicklung habe ich irgendwann
-          <strong class="reset">Matthäus</strong> kennengelernt.
-          Als er sich entschied, eine Firma zu gründen, bin ich einfach mit ihm gegangen. Seitdem arbeiten wir
-          gemeinsam bei der tollsten Firma der Welt!
+        <p>
+          Nach meiner Ausbildung und vielen langen Jahren im Bereich der
+          Webentwicklung habe ich irgendwann
+          <strong class="reset">Matthäus</strong> kennengelernt. Als er sich
+          entschied, eine Firma zu gründen, bin ich einfach mit ihm gegangen.
+          Seitdem arbeiten wir gemeinsam bei der tollsten Firma der Welt!
         </p>
-        <a href="https://www.bitsandlikes.de" alt="Bits & Likes" target="_blank"
+        <a
+          href="https://www.bitsandlikes.de"
+          alt="Bits & Likes"
+          target="_blank"
           class="p-4 bg-rhino-950 rounded-2xl w-64 h-32 flex items-center justify-center">
-          <img class="h-full w-auto" src="/img/bl.png" alt="Bits & Likes GmbH" />
+          <img
+            class="h-full w-auto"
+            src="/img/bl.png"
+            alt="Bits & Likes GmbH" />
         </a>
         <h2 class="text-xl sm:text-2xl text-rhino-400 reset">
-          <Icon :name="iconNameStore.getIconName('techstack')" alt="Tech Stack" />
+          <Icon
+            :name="iconNameStore.getIconName('techstack')"
+            alt="Tech Stack" />
           Tech Stack
         </h2>
         <p>
-          Ich komme aus einer Zeit, in der es den Begriff <strong class="reset">Frontend-Developer</strong> noch gar
-          nicht gab. Damals
-          waren wir alle einfach <strong class="reset">Webdesigner</strong>.
-          Zu der Zeit habe ich viel mit <strong class="reset">WordPress</strong> und eigenen in <strong
-            class="reset">PHP</strong> geschriebenen
-          Applikationen gemacht. Mittlerweile hat sich
-          mein Tech Stack auf <strong class="reset">JavaScript</strong> basierte Frameworks spezialisiert:
+          Ich komme aus einer Zeit, in der es den Begriff
+          <strong class="reset">Frontend-Developer</strong> noch gar nicht gab.
+          Damals waren wir alle einfach
+          <strong class="reset">Webdesigner</strong>. Zu der Zeit habe ich viel
+          mit <strong class="reset">WordPress</strong> und eigenen in
+          <strong class="reset">PHP</strong> geschriebenen Applikationen
+          gemacht. Mittlerweile hat sich mein Tech Stack auf
+          <strong class="reset">JavaScript</strong> basierte Frameworks
+          spezialisiert:
         </p>
 
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:flex-wrap pt-6 space-y-6 sm:space-y-0">
+        <div
+          class="flex flex-col sm:flex-row sm:justify-between sm:flex-wrap pt-6 space-y-6 sm:space-y-0">
           <div>
             <h3 class="text-lg sm:text-xl text-rhino-400 reset mb-2 font-bold">
               <Icon name="material-symbols:rocket-launch" alt="Rakete" />
@@ -55,15 +75,21 @@ const iconNameStore = useIconNameStore();
             </h3>
             <ul class="list-none">
               <li>
-                <Icon :name="iconNameStore.getIconName('nodejs')" alt="NodeJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('nodejs')"
+                  alt="NodeJs" />
                 NodeJs
               </li>
               <li>
-                <Icon :name="iconNameStore.getIconName('nestjs')" alt="NestJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('nestjs')"
+                  alt="NestJs" />
                 NestJs
               </li>
               <li>
-                <Icon :name="iconNameStore.getIconName('graphql')" alt="NodeJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('graphql')"
+                  alt="NodeJs" />
                 GraphQL
               </li>
             </ul>
@@ -87,7 +113,9 @@ const iconNameStore = useIconNameStore();
                 React
               </li>
               <li>
-                <Icon :name="iconNameStore.getIconName('tailwind')" alt="NodeJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('tailwind')"
+                  alt="NodeJs" />
                 Tailwindcss
               </li>
             </ul>
@@ -99,11 +127,15 @@ const iconNameStore = useIconNameStore();
             </h3>
             <ul class="list-none">
               <li>
-                <Icon :name="iconNameStore.getIconName('docker')" alt="NodeJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('docker')"
+                  alt="NodeJs" />
                 Docker
               </li>
               <li>
-                <Icon :name="iconNameStore.getIconName('kubernetes')" alt="NodeJs" />
+                <Icon
+                  :name="iconNameStore.getIconName('kubernetes')"
+                  alt="NodeJs" />
                 Kubernetes
               </li>
               <li>
@@ -119,23 +151,37 @@ const iconNameStore = useIconNameStore();
           Projekte
         </h2>
         <p>
-          Meine eigenen Projekte findest du auf meinem <a href="https://github.com/der-alex/" target="_blank"
-            alt="GitHub">
-            <Icon name="mdi:github" alt="GitHub" /> GitHub Profil
-          </a>. Hier findest du ein buntes Sammelsurium an Dingen, die ich mal ausprobiert habe oder auch an kleineren
-          Projekten, die sogar irgendwo Live sind.
-          Ansonsten kannst du auch gerne einmal bei meinem <a href="https://codepen.io/der-alex/" alt="CodePen"
-            target="_blank">
+          Meine eigenen Projekte findest du auf meinem
+          <a href="https://github.com/der-alex/" target="_blank" alt="GitHub">
+            <Icon name="mdi:github" alt="GitHub" /> GitHub Profil </a
+          >. Hier findest du ein buntes Sammelsurium an Dingen, die ich mal
+          ausprobiert habe oder auch an kleineren Projekten, die sogar irgendwo
+          Live sind. Ansonsten kannst du auch gerne einmal bei meinem
+          <a href="https://codepen.io/der-alex/" alt="CodePen" target="_blank">
             <Icon name="mdi:codepen" alt="CodePen" /> CodePen Profil
-          </a> vorbei
-          schauen.
+          </a>
+          vorbei schauen.
         </p>
         <h3 class="text-lg sm:text-xl text-rhino-400 reset mb-2 font-bold">
           <Icon name="mdi:star-circle" alt="Top Projekte" />
           Top Projekte
         </h3>
         <div class="flex flex-wrap gap-4">
-          <a href="https://www.ruhrpott-ipsum.de" alt="Ruhrpott Ipsum - Blindtextgenerator aus dem Pott" target="_blank"
+          <a
+            href="https://top-gamedeals.de"
+            alt="Top-Gamedeals.de - Hier findest du die günstigsten Game Deals für PC und Konsolen"
+            target="_blank"
+            class="bg-[#18181b] p-4 rounded-2xl w-64 h-20 flex items-center justify-center">
+            <img
+              src="/img/top-gamedeals-logo.png"
+              alt="Top-Gamedeals.de - Hier findest du die günstigsten Game Deals für PC und Konsolen"
+              width="138"
+              height="59" />
+          </a>
+          <a
+            href="https://www.ruhrpott-ipsum.de"
+            alt="Ruhrpott Ipsum - Blindtextgenerator aus dem Pott"
+            target="_blank"
             class="bg-[#ffd800] p-4 rounded-2xl w-64 h-20 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.37 16.93">
               <path
@@ -152,17 +198,24 @@ const iconNameStore = useIconNameStore();
                 <path d="m44.15 7.14-2.53-2.52-.08-.08" />
                 <path d="m44.15 4.54-2.53 2.52-.08.08" />
               </g>
-              <path d="M36.01 10.49h9.36V9.7H36zm1.28-7.31v-1.2h.85v1.2zm5.95 0v-1.2h.85v1.2z" />
-              <path fill="none" stroke="#000" stroke-width=".167" d="M34.74 1.94v-.17h11.9v.17z" />
+              <path
+                d="M36.01 10.49h9.36V9.7H36zm1.28-7.31v-1.2h.85v1.2zm5.95 0v-1.2h.85v1.2z" />
+              <path
+                fill="none"
+                stroke="#000"
+                stroke-width=".167"
+                d="M34.74 1.94v-.17h11.9v.17z" />
             </svg>
           </a>
-          <a href="https://der-alex.github.io/" alt="Ruhrpott Ipsum - Blindtextgenerator aus dem Pott" target="_blank"
+          <a
+            href="https://der-alex.github.io/"
+            alt="Responsive Sass Gridd"
+            target="_blank"
             class="block bg-[#049372] p-4 rounded-2xl w-64 h-20 flex items-center justify-center">
             <span class="text-rhino-100">Responsive Sass Grid</span>
           </a>
         </div>
       </div>
-
     </AwArticleDetail>
   </div>
 </template>

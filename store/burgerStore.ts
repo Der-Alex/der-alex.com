@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const useBurgerStore = defineStore({
-  id: 'burger-store',
+export const useBurgerStore = defineStore('burger-store', {
   state: () => {
     return {
       checked: false,

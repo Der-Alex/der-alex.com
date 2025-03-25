@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { routerKey } from 'vue-router';
 import { useBurgerStore } from './store/burgerStore';
 const requestURL = useRequestURL();
 const route = useRoute();
@@ -9,21 +8,22 @@ useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: `https://${requestURL.host}${route.path === '/' ? '' : route.path}`
+      href: `https://${requestURL.host}${route.path === '/' ? '' : route.path}`,
     },
     {
       rel: 'favicon',
       href: 'favicon.ico',
-      type: 'image/x-icon'
-    }
-  ]
-}))
-
+      type: 'image/x-icon',
+    },
+  ],
+}));
 </script>
 <template>
   <Html class="dark" lang="de" />
 
-  <Body class="bg-rhino-950" :class="{ 'mobile-menu-open': burgerStore.checked }" />
+  <Body
+    class="bg-rhino-950"
+    :class="{ 'mobile-menu-open': burgerStore.checked }" />
   <div class="is-wrapper max-w-5xl mx-auto">
     <MainNav class="hidden lg:block w-full max-w-5xl px-4 mx-auto" />
     <MobileNav />
@@ -32,7 +32,7 @@ useHead(() => ({
   </div>
 </template>
 <style>
-[data-content-id]> :first-child {
+[data-content-id] > :first-child {
   margin-top: 0 !important;
 }
 

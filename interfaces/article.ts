@@ -1,11 +1,12 @@
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
-
-export interface Article extends ParsedContent {
+export interface Article {
   id: string | number;
-  _path: string;
   title: string;
   description: string;
   tags: string[];
   created: string;
   category: string;
+  path: string;
+  meta: {
+    path: string;
+  };
 }

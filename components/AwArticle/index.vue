@@ -12,6 +12,11 @@ const props = defineProps({
     default: false,
   },
 });
+
+const path = computed(
+  () => props.article.meta.path ?? props.article.path ?? ''
+);
+
 const iconNameStore = useIconNameStore();
 const articleColor = computed(() => {
   let colorString = 'from-rhino-800 to-rhino-600 shadow-extra';
@@ -57,7 +62,7 @@ const svgColor = computed(() => {
       class="overflow-hidden rounded-2xl px-8 py-4 bg-gradient-to-br dark:text-rhino-50 relative flex flex-col h-full"
       :class="articleColor">
       <AwArticleHeader
-        :url="article._path"
+        :url="path"
         :title="article.title"
         :tags="article.tags"
         :is-detail="isDetail" />

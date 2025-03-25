@@ -8,8 +8,8 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/content',
     '@nuxtjs/sitemap',
+    '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-icon',
@@ -24,14 +24,10 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
 
-  sitemap: {
-    strictNuxtContentPaths: true,
-  },
-
   router: {
     options: {
-      strict: true
-    }
+      strict: true,
+    },
   },
 
   routeRules: {
@@ -41,29 +37,26 @@ export default defineNuxtConfig({
   },
 
   content: {
-    documentDriven: {
-      navigation: false,
-      page: false,
-      surround: false
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: [
+            'ts',
+            'js',
+            'json',
+            'vue',
+            'yaml',
+            'css',
+            'html',
+            'bash',
+            'php',
+          ],
+        },
+      },
     },
-  
-    
-    markdown: {
+    renderer: {
       anchorLinks: false,
-    },
-    highlight: {
-      theme: 'github-dark',
-      preload: [
-        'ts',
-        'js',
-        'json',
-        'vue',
-        'yaml',
-        'css',
-        'html',
-        'bash',
-        'php',
-      ],
     },
   },
 

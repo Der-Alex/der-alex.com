@@ -1,5 +1,3 @@
-import type { QueryBuilderParams } from '@nuxt/content/types';
-
 export const useCategory = async (urlPart: string, category: string) => {
   const skip = ref(1);
   const route = useRoute();
@@ -8,11 +6,15 @@ export const useCategory = async (urlPart: string, category: string) => {
   let maxPages = 1;
   const whereParam = {} as any;
   if (category.length > 0) {
-    whereParam['category'] = category;
+    whereParam['field'] = 'category';
+    whereParam['operator'] = '=';
+    whereParam['value'] = category;
   }
 
   const { data } = await useAsyncData(urlPart, () =>
-    queryContent('/').where(whereParam).count()
+    category.length > 0
+      ? queryCollection('content').where('category', '=', category).count()
+      : queryCollection('content').count()
   );
 
   if (data.value) {
@@ -30,9 +32,9 @@ export const useCategory = async (urlPart: string, category: string) => {
     skip.value = parseInt(route.params.page);
   }
 
-  const query: QueryBuilderParams = reactive({
+  const query: any = reactive({
     path: '/',
-    where: [whereParam],
+    where: whereParam,
     skip: itemsToShow * (skip.value - 1),
     limit: itemsToShow,
     sort: [{ created: -1 }],

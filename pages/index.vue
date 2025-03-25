@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import type { Article } from '~/interfaces/article';
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 
-const query: QueryBuilderParams = {
-  path: '/',
-  limit: 6,
-  sort: [{ created: -1 }],
-};
+const { data: list } = await useAsyncData(() =>
+  queryCollection('content').limit(6).order('created', 'DESC').all()
+);
 
 useHead({
   title:
@@ -28,9 +25,7 @@ useHead({
 
 <template>
   <main class="w-full max-w-5xl px-4 mx-auto wrapper">
-    <ContentList path="/" :query="query" v-slot="{ list }">
-      <AwArticleList :articles="(list as Article[])" />
-    </ContentList>
+    <AwArticleList :articles="(list as unknown as Article[])" />
     <AwArticleDetail class="flex flex-col gap-4">
       <h1 class="font-bold text-lg md:text-2xl mb-8">
         Herzlich willkommen auf www.der-alex.com – Deiner ultimativen

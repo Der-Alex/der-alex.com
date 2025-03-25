@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const useIconNameStore = defineStore({
-  id: 'icon-name-store',
+export const useIconNameStore = defineStore('icon-name-store', {
   getters: {
     getIconName: () => {
       return (tag: string) => {

@@ -17,9 +17,9 @@
     "vue-router": "^4.5.0"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
-    "@nuxtjs/sitemap": "^5.3.5",
-    "@pinia/nuxt": "^0.5.5",
-    "@vueuse/core": "^10.11.1"
+    "@nuxt/content": "^3.4.0",
+    "@nuxtjs/sitemap": "^7.2.9",
+    "@pinia/nuxt": "^0.10.1",
+    "@vueuse/core": "^13.0.0"
   }
 }

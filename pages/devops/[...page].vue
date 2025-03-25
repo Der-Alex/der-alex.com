@@ -3,6 +3,15 @@ import type { Article } from '~/interfaces/article';
 const urlPart = 'devops';
 const category = 'DevOps';
 const { query } = await useCategory(urlPart, category);
+
+const { data: list } = await useAsyncData(() =>
+  queryCollection('content')
+    .limit(query.limit)
+    .skip(query.skip)
+    .order('created', 'DESC')
+    .all()
+);
+
 useHead({
   title: 'Der-Alex.com | DevOps, Kubernetes und Linux Wisssen',
   meta: [
@@ -20,9 +29,7 @@ useHead({
 </script>
 <template>
   <main class="w-full max-w-5xl px-4 mx-auto wrapper">
-    <ContentList :query="query" v-slot="{ list }">
-      <AwArticleList :articles="(list as Article[])" />
-    </ContentList>
+    <AwArticleList :articles="(list as unknown as Article[])" />
     <Pagination :url-part="urlPart" :category="category" />
   </main>
 </template>

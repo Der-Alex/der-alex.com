@@ -21,5 +21,10 @@
     "@nuxtjs/sitemap": "^7.2.9",
     "@pinia/nuxt": "^0.10.1",
     "@vueuse/core": "^13.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   }
 }

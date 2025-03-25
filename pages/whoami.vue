@@ -31,23 +31,6 @@ const iconNameStore = useIconNameStore();
           schon mit 6 Jahren klar, als ich zum Geburtstag einen
           <strong class="reset">Amiga 500</strong> geschenkt bekommen habe.
         </p>
-        <p>
-          Nach meiner Ausbildung und vielen langen Jahren im Bereich der
-          Webentwicklung habe ich irgendwann
-          <strong class="reset">Matthäus</strong> kennengelernt. Als er sich
-          entschied, eine Firma zu gründen, bin ich einfach mit ihm gegangen.
-          Seitdem arbeiten wir gemeinsam bei der tollsten Firma der Welt!
-        </p>
-        <a
-          href="https://www.bitsandlikes.de"
-          alt="Bits & Likes"
-          target="_blank"
-          class="p-4 bg-rhino-950 rounded-2xl w-64 h-32 flex items-center justify-center">
-          <img
-            class="h-full w-auto"
-            src="/img/bl.png"
-            alt="Bits & Likes GmbH" />
-        </a>
         <h2 class="text-xl sm:text-2xl text-rhino-400 reset">
           <Icon
             :name="iconNameStore.getIconName('techstack')"
@@ -211,7 +194,7 @@ const iconNameStore = useIconNameStore();
             href="https://der-alex.github.io/"
             alt="Responsive Sass Gridd"
             target="_blank"
-            class="block bg-[#049372] p-4 rounded-2xl w-64 h-20 flex items-center justify-center">
+            class="bg-[#049372] p-4 rounded-2xl w-64 h-20 flex items-center justify-center">
             <span class="text-rhino-100">Responsive Sass Grid</span>
           </a>
         </div>

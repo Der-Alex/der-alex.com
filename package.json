@@ -10,21 +10,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.13.2",
-    "nuxt": "^3.16.1",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "nuxt": "^3.17.2",
     "nuxt-icon": "^0.6.10",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.1"
   },
   "dependencies": {
-    "@nuxt/content": "^3.4.0",
-    "@nuxtjs/sitemap": "^7.2.9",
+    "@nuxt/content": "^3.5.1",
+    "@nuxtjs/sitemap": "^7.2.10",
     "@pinia/nuxt": "^0.10.1",
-    "@vueuse/core": "^13.0.0"
+    "@vueuse/core": "^13.1.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
 }

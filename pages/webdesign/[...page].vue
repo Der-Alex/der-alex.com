@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import type { Article } from '~/interfaces/article';
+
 const urlPart = 'webdesign';
 const category = 'Webdesign';
 const { query } = await useCategory(urlPart, category);
 
 const { data: list } = await useAsyncData(() =>
   queryCollection('content')
+    .where(query.where.field, query.where.operator, query.where.value)
     .limit(query.limit)
     .skip(query.skip)
     .order('created', 'DESC')

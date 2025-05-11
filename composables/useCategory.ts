@@ -11,24 +11,22 @@ export const useCategory = async (urlPart: string, category: string) => {
     whereParam['value'] = category;
   }
 
-  const { data } = await useAsyncData(urlPart, () =>
-    category.length > 0
+  const { data } = await useAsyncData(urlPart, () => {
+    return category.length > 0
       ? queryCollection('content').where('category', '=', category).count()
-      : queryCollection('content').count()
-  );
+      : queryCollection('content').count();
+  });
 
   if (data.value) {
     maxPages = Math.ceil(data.value / itemsToShow);
   }
 
   if (Array.isArray(route.params.page) && route.params.page.length > 0) {
-    console.log('page array pos 0 is', route.params.page[0]);
     skip.value = parseInt(route.params.page[0] as string);
   } else if (
     typeof route.params.page === 'string' &&
     route.params.page.length > 0
   ) {
-    console.log('page string is', route.params.page);
     skip.value = parseInt(route.params.page);
   }
 

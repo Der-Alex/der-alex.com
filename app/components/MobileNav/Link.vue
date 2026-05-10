@@ -21,6 +21,21 @@ const props = defineProps({
     default: "0"
   }
 });
+
+const getDelay = computed(() => {
+  switch (props.delay) {
+    case "0":
+      return "delay-0";
+    case "50":
+      return "delay-[50ms]";
+    case "100":
+      return "delay-[100ms]";
+    case "150":
+      return "delay-[150ms]";
+    case "200":
+      return "delay-[200ms]";
+  }
+});
 </script>
 
 <template>
@@ -41,7 +56,7 @@ const props = defineProps({
           'w-32 group-hover:w-36': burgerStore.checked,
           'w-0': !burgerStore.checked
         },
-        `delay-[${delay}ms]`
+        getDelay
       ]"
       >{{ text }}</span
     >

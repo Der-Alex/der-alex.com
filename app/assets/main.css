@@ -12,7 +12,7 @@
   font-display: swap;
 }
 
-@theme {
+@theme static inline {
   --color-rhino-50: #f4f7fa;
   --color-rhino-100: #e6ebf3;
   --color-rhino-200: #d3dbea;

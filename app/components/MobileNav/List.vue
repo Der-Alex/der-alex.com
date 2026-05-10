@@ -16,7 +16,7 @@ const links = useMainNavLinks();
         class="relative h-14 text-rhino-950 font-bold transition-colors hover:text-amber-400"
       >
         <MobileNavLink
-          :delay="(25 * index).toString()"
+          :delay="(50 * index).toString()"
           :url="link.url"
           :text="link.text"
           :icon-name="link.iconName"

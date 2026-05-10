@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "WaitingfortheSunrise";
+  src: url("/assets/fonts/WaitingfortheSunrise-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@theme {
+  --color-rhino-50: #f4f7fa;
+  --color-rhino-100: #e6ebf3;
+  --color-rhino-200: #d3dbea;
+  --color-rhino-300: #b4c4dc;
+  --color-rhino-400: #90a6ca;
+  --color-rhino-500: #758bbc;
+  --color-rhino-600: #6375ad;
+  --color-rhino-700: #57659e;
+  --color-rhino-800: #4b5482;
+  --color-rhino-900: #3a415f;
+  --color-rhino-950: #2a2d41;
+  --font-extra: "WaitingfortheSunrise";
+  --font-extra2: "Open-Sans";
+  --breakpoint-mdplus: 876px;
+  --shadow-extra: 0px 0 4px 2px rgba(0, 0, 0, 0.15);
+  --shadow-extra_link: 6px 0 2px -4px rgba(0, 0, 0, 0.15);
+}
+
+@layer base {
+  svg {
+    display: inline-flex;
+
+    &.iconify {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+
+.dark .router-link-exact-active:not(.article-link) {
+  @apply text-amber-400;
+}
+
+.wrapper > * + * {
+  @apply mt-8;
+}

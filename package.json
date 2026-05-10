@@ -1,0 +1,24 @@
+{
+  "name": "der-alex-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.13.0",
+    "@nuxt/icon": "^2.2.2",
+    "@nuxtjs/sitemap": "^8.0.15",
+    "@pinia/nuxt": "^0.11.3",
+    "@tailwindcss/vite": "^4.2.4",
+    "@vueuse/core": "^14.3.0",
+    "better-sqlite3": "^12.9.0",
+    "nuxt": "^4.4.4",
+    "pinia": "^3.0.4",
+    "tailwindcss": "^4.2.4",
+    "zod": "^4.4.3"
+  }
+}

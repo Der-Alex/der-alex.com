@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" }
   },
-  css: ["./app/assets/main.css"],
+  css: ["~/assets/main.css"],
   icon: {
     mode: "svg"
   },
@@ -42,6 +42,10 @@ export default defineNuxtConfig({
       strict: true
     }
   },
+  sitemap: {
+    // catch-all category routes can't be discovered automatically
+    urls: ["/webdesign", "/development", "/devops", "/archiv"]
+  },
   routeRules: {
     "/whoami": { sitemap: false },
     "/datenschutz": { sitemap: false },
@@ -52,5 +56,8 @@ export default defineNuxtConfig({
       include: []
     },
     plugins: [tailwindcss()]
+  },
+  devServer: {
+    port: 1234
   }
 });

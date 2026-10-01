@@ -9,16 +9,16 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@nuxt/content": "^3.13.0",
-    "@nuxt/icon": "^2.2.2",
-    "@nuxtjs/sitemap": "^8.0.15",
+    "@nuxt/content": "^3.16.1",
+    "@nuxt/icon": "^2.5.1",
+    "@nuxtjs/sitemap": "^8.6.1",
     "@pinia/nuxt": "^0.11.3",
-    "@tailwindcss/vite": "^4.2.4",
-    "@vueuse/core": "^14.3.0",
-    "better-sqlite3": "^12.9.0",
-    "nuxt": "^4.4.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vueuse/core": "^14.4.0",
+    "better-sqlite3": "^12.11.1",
+    "nuxt": "^4.5.2",
     "pinia": "^3.0.4",
-    "tailwindcss": "^4.2.4",
-    "zod": "^4.4.3"
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.6.5"
   }
 }

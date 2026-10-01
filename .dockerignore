@@ -1,0 +1,9 @@
+.git
+node_modules
+.nuxt
+.output
+.nitro
+.cache
+.data
+.env
+.env.*

@@ -11,8 +11,8 @@ useHead(() => ({
       href: `https://${requestURL.host}${route.path === "/" ? "" : route.path}`
     },
     {
-      rel: "favicon",
-      href: "favicon.ico",
+      rel: "icon",
+      href: "/favicon.ico",
       type: "image/x-icon"
     }
   ]

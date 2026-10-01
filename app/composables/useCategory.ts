@@ -6,12 +6,23 @@ export const useCategory = () => {
   const maxPages = ref(1);
   const skipItems = computed(() => itemsToShow * (skip.value - 1));
 
+  const throwNotFound = () => {
+    throw createError({
+      status: 404,
+      statusText: "Seite nicht gefunden",
+      fatal: import.meta.client
+    });
+  };
+
   if (route.params.page) {
-    if (Array.isArray(route.params.page)) {
-      skip.value = Number(route.params.page[0]);
-    } else {
-      skip.value = Number(route.params.page);
+    const pageParam = Array.isArray(route.params.page)
+      ? route.params.page
+      : [route.params.page];
+
+    if (pageParam.length > 1 || !/^[1-9]\d*$/.test(pageParam[0] ?? "")) {
+      throwNotFound();
     }
+    skip.value = Number(pageParam[0]);
   }
 
   const getCount = async (urlPart: string, category: string) => {
@@ -44,6 +55,10 @@ export const useCategory = () => {
       }
     );
 
+    if (skip.value > 1 && !list.value?.length) {
+      throwNotFound();
+    }
+
     return list;
   };
 
@@ -51,13 +66,13 @@ export const useCategory = () => {
     skip.value--;
     if (skip.value <= 1) {
       skip.value = 1;
-      return router.push({ path: `/${urlPart}/` });
+      return router.push({ path: `/${urlPart}` });
     }
     router.push({ path: `/${urlPart}/${skip.value}` });
   };
 
   const clickNextHandler = (urlPart: string) => {
-    if (skip.value > maxPages.value) return;
+    if (skip.value >= maxPages.value) return;
     skip.value++;
 
     router.push({ path: `/${urlPart}/${skip.value}` });

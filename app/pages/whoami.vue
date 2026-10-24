@@ -192,19 +192,6 @@ const iconNameStore = useIconNameStore();
         </h3>
         <div class="projects grid grid-cols-1 gap-4">
           <a
-            href="https://top-gamedeals.de"
-            alt="Top-Gamedeals.de - Hier findest du die günstigsten Game Deals für PC und Konsolen"
-            target="_blank"
-            class="bg-[#18181b] p-4 rounded-2xl h-20 flex items-center justify-center"
-          >
-            <img
-              src="/img/top-gamedeals-logo.png"
-              alt="Top-Gamedeals.de - Hier findest du die günstigsten Game Deals für PC und Konsolen"
-              width="138"
-              height="59"
-            />
-          </a>
-          <a
             href="https://www.ruhrpott-ipsum.de"
             alt="Ruhrpott Ipsum - Blindtextgenerator aus dem Pott"
             target="_blank"
